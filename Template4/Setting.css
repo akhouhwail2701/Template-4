@@ -1,0 +1,549 @@
+*{box-sizing: border-box;}
+*:focus{outline: none;}
+body{font-family: "Open Sans",sans-serif;margin: 0;}
+a{text-decoration: none;}
+ul{list-style-type: none;}  
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-track{
+    background-color: white;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #0075ff;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #003cff;
+}
+.toogle{
+    width: 60px;
+    height: 25px;
+    background-color: gray;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.rd1{
+    width: 30px;
+    height: 30px;
+    background-color: #808080;
+    border-radius: 50%;
+}
+.rd2{
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    border-radius: 50%;
+    visibility: hidden;
+}
+
+/******************************************/
+/* Start sidebar */
+.sidebar{
+    background-color: #f1f5f9;
+    width: 180px;
+    height: 100vh;
+    box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.507) ;
+    float: left;
+    position: fixed;
+}
+.sidebar h3{
+    font-size: 20px;
+    padding-top: 20px;
+    padding-left: 50px;
+    position: relative;
+}
+.sidebar h3::before{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #000;
+    left: 50%;
+    top: 120%;
+    transform: translateX(-60%);
+}
+.sidebar h3::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border: 3px #f1f5f9 solid;
+    border-radius: 50%;
+    left: 50%;
+    top: 120%;
+    transform: translate(-100%,-40%);
+}
+.sidebar ul{
+    padding-left: 10px;
+}
+.sidebar ul li{
+    padding: 10px 10px;
+}
+.sidebar ul li:hover{
+    background-color: #80808018;
+}
+.sidebar ul li.active{
+    background-color: #8080809d;
+}
+.sidebar ul li a div{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.sidebar ul li a>div.dashboard{
+    background-image: url("Template4_photo/Dashboard.png");
+}.sidebar ul li a>div.setting{
+    background-image: url("Template4_photo/setting.png");
+}.sidebar ul li a>div.profil{
+    background-image: url("Template4_photo/profil.png");
+}.sidebar ul li a div.projects{
+    background-image: url("Template4_photo/projets.png");
+}.sidebar ul li a>div.cours{
+    background-image: url("Template4_photo/cours.png");
+}.sidebar ul li a>div.friends{
+    background-image: url("Template4_photo/friends.png");
+}.sidebar ul li a>div.files{
+    background-image: url("Template4_photo/files.png");
+}.sidebar ul li a>div.plans{
+    background-image: url("Template4_photo/plan.png");
+}
+.sidebar ul li span{
+    cursor: pointer;
+    color: #000;
+    text-transform: capitalize;
+}
+/* End sidebar */
+
+/* Start content */
+.content-area{
+    background-color: #F1f5f9;
+    width: calc(100% - 200px);
+    height: 50px;
+    float: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: -1;
+    left: 180px;
+}
+.content-area .input{
+    position: relative;
+}
+.content-area .input .icon{
+    width: 35px;
+    height: 35px;
+    background-image: url("Template4_photo/recherche.png ");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    z-index: 2;
+    top: 1px;
+    left: 1px;
+    border-radius: 5px;
+}
+.content-area .input input{
+    height: 40px;
+    text-indent: 40px;
+    border-radius: 5px;
+    border: 1px black solid;
+}
+.content-area .input input::placeholder{
+    text-transform: capitalize;
+    font-size: 12px;
+}
+.content-area .icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+}
+.content-area .icons .icon1{
+    width: 20px;
+    height: 20px;
+    background-image: url("Template4_photo/notification.png ");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    border-radius: 50%;
+}
+.content-area .icons .icon1::after{
+    content: "";
+    width: 7px;
+    height: 7px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.content-area .icons .icon2{
+    width: 30px;
+    height: 30px;
+    background-image: url("Template4_photo/content.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+}
+/* Start Setting */
+.Page_Dashboard{
+    position: absolute;
+    left: 180px;
+    top: 50px;
+    z-index: -2;
+    width: calc(100% - 200px);
+    min-height: 800px;
+    max-height: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: lavender;
+}
+.Page_Dashboard>h1{
+    width: fit-content;
+    height: fit-content;
+    text-transform: capitalize;
+    position: relative;
+}
+.Page_Dashboard>h1::before{
+    content: "";
+    width: 80%;
+    height: 5px;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+}
+.Page_Dashboard>h1::after{
+    content: "";
+    width: 20%;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+}
+.Page_Dashboard .content{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-template-rows: repeat(auto-fill,350px);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+/* site controle */
+.Site-Info{
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+}
+.Site-Info>h3{
+    text-transform: capitalize;
+}
+.Site-Info>h6{
+    text-transform: capitalize;
+    color: gray;
+    margin-top: 0px;
+}
+.Site-Info .content{
+    width: 100%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 50%;
+}
+.Site-Info .content>div:first-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Site-Info .content .text>h6{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-transform: capitalize;
+    font-size: 12px;
+}
+.Site-Info .content .text>p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    color: gray;
+    text-transform: capitalize;
+    font-size: 9px;
+}
+.Site-Info .content input{
+    border-radius: 5px;
+    border: 1px gray solid;
+}
+.Site-Info .content input::placeholder{
+    text-transform: capitalize;
+}
+/* site controle */
+
+/* general info */
+.General-Info{
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+}
+.General-Info h3{
+    text-transform: capitalize;
+}
+.General-Info h6{
+    text-transform: capitalize;
+    color: gray;
+    margin-top: 0px;
+}
+.General-Info form{
+    width: 100%;
+    height: 60%;
+}
+.General-Info form>label{
+    font-size: 13px;
+    text-transform: capitalize;
+    color: gray;
+}
+.General-Info form>input{
+    width: 100%;
+    height: 15%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px rgba(128, 128, 128, 0.432) solid;
+    text-indent: 5px;
+}
+.General-Info form>input[type="email"]{
+    font-size: 12px;
+    color: gray;
+    background-color: #8080804f;
+}
+.General-Info form>input[type="submit"]{
+    text-transform: capitalize;
+    font-size: 13px;
+    color: #0075ff;
+    width: fit-content;
+    height: fit-content;
+    float: right;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* general info */
+
+/* security info */
+.Security-Info{
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+}
+.Security-Info h3{
+    text-transform: capitalize;
+}
+.Security-Info h6{
+    text-transform: capitalize;
+    color: gray;
+    margin-top: 0px;
+}
+.Security-Info .content{
+    width: 100%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3,30%);
+}
+.Security-Info .content>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px #8080803d solid;
+    padding-bottom: 20px;
+}
+.Security-Info .content>div:last-child{
+    border-bottom: none;
+}
+.Security-Info .content>div>.text>h5{
+    margin-bottom: 0px;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+.Security-Info .content>div>.text>p{
+    margin-top: 0px;
+    font-size: 10px;
+    color: gray;
+    text-transform: capitalize;
+}
+.Security-Info .content>div:first-child>span{
+    text-transform: capitalize;
+    background-color: #0075ff;
+    padding: 2px 4px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+.Security-Info .content>div:last-child>span{
+    text-transform: capitalize;
+    background-color: #80808071;
+    padding: 2px 4px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+/* security info */
+
+/* social info */
+.Social-Info{
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    height: 350px;
+}
+.Social-Info>h3{
+    text-transform: capitalize;
+}
+.Social-Info h6{
+    text-transform: capitalize;
+    color: gray;
+    margin-top: 0px;
+}
+.Social-Info>.content{
+    width: 100%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4,20%);
+    row-gap: 1%;
+}
+.Social-Info>.content>div{
+    display: grid;
+    grid-template-columns: 8% 92%;
+    grid-template-rows: 100%;
+    align-items: center;
+}
+.Social-Info>.content>div>img{
+    width: 20px;
+    height: 20px;
+}
+.Social-Info>.content>div>input{
+    background-color: #80808042;
+    padding: 5px 5px;
+    border: none;
+}
+.Social-Info>.content>div>input{
+    font-size: 12px;
+    text-transform: capitalize;
+}
+/* social info */
+
+/* widgets control */
+.Widgets-Control{
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    height: 350px;
+}
+.Widgets-Control h3{
+    text-transform: capitalize;
+}
+.Widgets-Control h6{
+    text-transform: capitalize;
+    color: gray;
+    margin-top: 0px;
+}
+.Widgets-Control .content{
+    width: 100%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6,10%);
+    text-transform: capitalize;
+}
+.Widgets-Control .content input{
+    cursor: pointer;
+}
+.Widgets-Control .content label{
+    cursor: pointer;
+}
+/* widgets control */
+
+/* backup manager */
+.backup-manager{
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+}
+.backup-manager>h3{
+    text-transform: capitalize;
+}
+.backup-manager>h6{
+    text-transform: capitalize;
+    color: gray;
+    margin-top: 0px;
+}
+.backup-manager>.content{
+    width: 100%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60% 40%;
+    row-gap: 10%;
+}
+.backup-manager>.content>div:first-child{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 1px #80808050 solid;
+    padding-bottom: 5px;
+}
+.backup-manager>.content>div:first-child>div{
+    display: flex;
+    align-items: center;
+}
+.backup-manager>.content>div:first-child>div>input{
+    width: 20px;
+    height: 20px;
+}
+.backup-manager>.content>div:last-child{
+    display: grid;
+    grid-template-columns: repeat(3,25%);
+    grid-template-rows: 70%;
+    row-gap: 20%;
+    column-gap: 12%;
+}
+.backup-manager>.content>div:last-child>div{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px gray solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+}
+.backup-manager>.content>div:last-child>div:first-child{
+    border: 2px #0075ff solid;
+    color: #0075ff;
+}
+.backup-manager>.content>div:last-child>div>img{
+    width: 15px;
+    height: 15px;
+}
+.backup-manager>.content>div:last-child>div>h6{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}   
+/* backup manager */
+
+/* End content */
+/* End Setting */

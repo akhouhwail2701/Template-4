@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="Setting.css">
+</head>
+
+<body>
+    <!-- Start sidebar -->
+    <div class="sidebar">
+        <h3>Elzero</h3>
+        <ul>
+            <li>
+                <a href="forth_Temlate.html">
+                    <div class="dashboard"></div>
+                    <span>dashboard</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="Setting.html">
+                    <div class="setting"></div>
+                    <span>setting</span>
+                </a>
+
+            </li>
+            <li>
+                <a href="Profil.html">
+                    <div class="profil"></div>
+                    <span>profile</span>
+                </a>
+
+            </li>
+            <li>
+                <a href="Projects.html">
+                    <div class="projects"></div>
+                    <span>projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="Cours.html">
+                    <div class="cours"></div>
+                    <span>cours</span>
+                </a>
+            </li>
+            <li>
+                <a href="Friends.html">
+                    <div class="friends"></div>
+                    <span>friends</span>
+                </a>
+            </li>
+            <li>
+                <a href="Files.html">
+                    <div class="files"></div>
+                    <span>files</span>
+                </a>
+            </li>
+            <li>
+                <a href="Plans.html">
+                    <div class="plans"></div>
+                    <span>plans</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- End sidebar -->
+
+    <!-- Start content -->
+    <div class="content-area">
+        <div class="input">
+            <div class="icon"></div>
+            <input type="text" placeholder="type a keyword">
+        </div>
+        <div class="icons">
+            <div class="icon1"></div>
+            <div class="icon2"></div>
+        </div>
+    </div>
+    <!-- Start content -->
+
+    <!-- Start Dashboard -->
+    <div class="Page_Dashboard">
+        <h1>setting</h1>
+        <div class="content">
+
+            <!-- site controle -->
+            <div class="Site-Info">
+                <h3>site controle</h3>
+                <h6>control the website if there is maintenence</h6>
+                <div class="content">
+                    <div>
+                        <div class="text">
+                            <h6>website controle</h6>
+                            <p>open/close website and type the reason</p>
+                        </div>
+                        <div class="toogle">
+                            <div class="rd1"></div>
+                            <div class="rd2"></div>
+                        </div>
+                    </div>
+                    <input type="text" placeholder="close message content">
+                </div>
+            </div>
+            <!-- site controle -->
+
+            <!-- general info -->
+            <div class="General-Info">
+                <h3>general info</h3>
+                <h6>general information about your account</h6>
+                <form action="">
+                    <label>first name</label><input type="text" placeholder="First Name">
+                    <label>last name</label><input type="text" placeholder="Last Name">
+                    <label>email</label><input type="email" readonly value="osama@.com">
+                    <input type="submit" value="change">
+                </form>
+            </div>
+            <!-- general info -->
+
+            <!-- security info -->
+            <div class="Security-Info">
+                <h3>security info</h3>
+                <h6>security information about your account</h6>
+                <div class="content">
+                    <div>
+                        <div class="text">
+                            <h5>password</h5>
+                            <p>last change on 25//10/2021</p>
+                        </div>
+                        <span>change</span>
+                    </div>
+                    <div>
+                        <div class="text">
+                            <h5>two-factor authentication</h5>
+                            <p>enable/disable the feature</p>
+                        </div>
+                        <div class="toogle">
+                            <div class="rd1"></div>
+                            <div class="rd2"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text">
+                            <h5>device</h5>
+                            <p>check the login devices list</p>
+                        </div>
+                        <span>devices</span>
+                    </div>
+                </div>
+            </div>
+            <!-- security info -->
+
+            <!-- social info -->
+            <div class="Social-Info">
+                <h3>social info</h3>
+                <h6>social media informaion</h6>
+                <div class="content">
+                    <div>
+                        <img src="Template4_photo/twitter1.png">
+                        <input type="text" placeholder="twitter username">
+                    </div>
+                    <div>
+                        <img src="Template4_photo/facebook1.png">
+                        <input type="text" placeholder="facebook username">
+                    </div>
+                    <div>
+                        <img src="Template4_photo/linkden1.png">
+                        <input type="text" placeholder="linkden username">
+                    </div>
+                    <div>
+                        <img src="Template4_photo/youtoub1.png">
+                        <input type="text" placeholder="youtoub username">
+                    </div>
+                </div>
+            </div>
+            <!-- social info -->
+
+            <!-- widgets control -->
+            <div class="Widgets-Control">
+                <h3> widgets control</h3>
+                <h6>show/hide widgets</h6>
+                <div class="content">
+                    <div><input type="checkbox" checked id="ch1"><label for="ch1">quick draft</label></div>
+                    <div><input type="checkbox" checked id="ch2"><label for="ch2">yearly targets</label></div>
+                    <div><input type="checkbox" checked id="ch3"><label for="ch3">tickets statistics</label></div>
+                    <div><input type="checkbox" checked id="ch4"><label for="ch4">latest news</label></div>
+                    <div><input type="checkbox" id="ch5"><label for="ch5"> latest tasks</label></div>
+                    <div><input type="checkbox" checked id="ch6"><label for="ch6">top search items</label></div>
+                </div>
+            </div>
+            <!-- widgets control -->
+
+            <!-- backup manager -->
+            <div class="backup-manager">
+                <h3>backup manager</h3>
+                <h6>control backup time and location</h6>
+                <div class="content">
+                    <div>
+                        <div><input type="radio" id="rb1" checked><label for="rb1">daily</label></div>
+                        <div><input type="radio" id="rb2" checked><label for="rb2">weekly</label></div>
+                        <div><input type="radio" id="rb3"><label for="rb3">monthly</label></div>
+                    </div>
+                    <div>
+                        <div class="Active"><img src="Template4_photo/back1.png">
+                            <h6>megaman</h6>
+                        </div>
+                        <div><img src="Template4_photo/back2.png">
+                            <h6>zero</h6>
+                        </div>
+                        <div><img src="Template4_photo/back2.png">
+                            <h6>sigma</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- backup manager -->
+
+        </div>
+    </div>
+    <!-- End Dashboard -->
+
+    <script src="Setting.js"></script>
+</body>
+
+</html>
